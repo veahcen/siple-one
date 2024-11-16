@@ -32,6 +32,22 @@ const DialogWindow: FC<IDialogWindow> = ({open, onClick}) => {
     // eslint-disable-next-line
   }, [open])
 
+  useEffect(() => {
+    if (open) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [open]);
+
   const [text, setText] = useState<string>('На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller');
   const [arrText, setArrText] = useState<{ id: number; name: string }[]>([
     { id: 0, name: "Проверить ACL id=172830402014193655" },
@@ -88,18 +104,18 @@ const DialogWindow: FC<IDialogWindow> = ({open, onClick}) => {
               idName='themew'
               isDanger={true}
               />
-            <InputText text='Описание' idName='descrw'/>
-            <InputText text='Рабочие заметки' idName='workw' isDanger={true} value={arrText[0].name} onChange={(e) => handleChangeText(e, 0)} />
-            <FuledCards text='Ответственный' singlePersone='Константин Константинопольский' />
             <InputText text='Статус' idName='statusw' value={arrText[1].name} onChange={(e) => handleChangeText(e, 1)} />
+            <InputText text='Описание' idName='descrw'/>
             <SearcInput labelText='Продукт' idName='productw' value={arrText[2].name} onChange={(e) => handleChangeText(e, 2)}/>
+            <InputText text='Рабочие заметки' idName='workw' isDanger={true} value={arrText[0].name} onChange={(e) => handleChangeText(e, 0)} />
             <InputText text='Приоритет' idName='prioripyw' value={arrText[3].name} onChange={(e) => handleChangeText(e, 3)} />
+            <FuledCards text='Ответственный' singlePersone='Константин Константинопольский' />
             <FuledCards text='Группа' singlePersone='Support Group' />
             <InputText text='Комментарии' idName='commentsw'  />
             <FuledCards text='Согласующие' people={tags} />
             <CalendarInput text='Когда открыто' idName='date1w' />
-            <FuledCards text='Кем открыто' singlePersone='Андрей Пивоваров' />
             <CalendarInput text='Когда создано' idName='date2w' value={arrText[4].name} onChange={(e) => handleChangeText(e, 4)} />
+              <FuledCards text='Кем открыто' singlePersone='Андрей Пивоваров' />
             <FuledCards text='Кем создано' singlePersone='Андрей Пивоваров' />
         </div>
       </div>
