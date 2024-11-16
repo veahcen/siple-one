@@ -1,0 +1,31 @@
+@use '../../styles/variables.scss' as *;
+
+.nav {
+  display: flex;
+  border-right: 1px solid $BorderDefault;
+  &__panel {
+    position: relative;
+    z-index: 4;
+    max-width: 336px;
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    &-open {
+      padding: 16px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      fill: $iconColor;
+    }
+    &-star {
+      padding: 0px 16px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+}
+
+.active {
+  fill: $iconAccent;
+}

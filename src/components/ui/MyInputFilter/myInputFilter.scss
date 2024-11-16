@@ -1,0 +1,33 @@
+@use '../../../styles/variables.scss' as *;
+
+.filter {
+  padding: 16px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid $BorderDefault;
+  &__box {
+    position: relative;
+    &-search {
+      padding: 8px 28px 8px 8px;
+      border: 1px solid $BorderDefault;
+      border-radius: 4px;
+    }
+    &-search::placeholder {
+      color: $colorTextMask;
+    }
+    &-search:focus-visible ~ &-img {
+      display: none;
+    }
+    &-img {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+  &-pin {
+    padding: 6px;
+    max-height: 32px;
+    border: 1px solid $BorderDefault;
+    border-radius: 4px;
+  }
+}

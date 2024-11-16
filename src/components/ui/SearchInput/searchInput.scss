@@ -1,0 +1,27 @@
+@use '../../../styles/variables.scss' as *;
+
+.input-search {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &__label {
+    font-weight: 600;
+    font-size: 14px;
+    &-danger {
+      padding-right: 4px;
+      color: $textAccent;
+    }
+  }
+  &__text {
+    width: 94%;
+    padding: 6px 0 6px 8px;
+    border: 1px solid $BorderDefault;
+    border-radius: 4px;
+  }
+}
+
+.box-search {
+  display: flex;
+  gap: 4px;
+}

@@ -1,0 +1,30 @@
+@use '../../../styles/variables.scss' as *;
+
+.date {
+  &-picker {
+    margin: 8px 0 16px 0;
+    display: flex;
+    gap: 4px;
+  }
+  &-label {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  &-input {
+    width: 96%;
+    padding: 6px 0 6px 8px;
+    border: 1px solid $BorderDefault;
+    border-radius: 4px;
+  }
+  &-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $BorderDefault;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}

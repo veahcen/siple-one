@@ -1,0 +1,35 @@
+@use '../../styles/variables.scss' as *;
+
+.list {
+  margin: 0;
+  padding: 0;
+  &-search {
+    z-index: 2;
+    margin-left: -100%;
+    max-width: 0;
+    max-height: 0;
+    border-left: 1px solid $BorderDefault;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+  }
+  &__item {
+    padding: 10px 16px;
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: $mainTextColor;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    &-arrow {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.active {
+  max-width: 280px;
+  max-height: inherit;
+  margin-left: 0;
+  transition: all 0.2s ease-in-out;
+}

@@ -1,0 +1,24 @@
+@use '../../../styles/variables.scss' as *;
+
+.input {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &__label {
+    font-weight: 600;
+    font-size: 14px;
+    &-danger {
+      padding-right: 4px;
+      color: $textAccent;
+    }
+    &-danger-no {
+      display: none;
+    }
+  }
+  &__text {
+    padding: 6px 0 6px 8px;
+    border: 1px solid $BorderDefault;
+    border-radius: 4px;
+  }
+}

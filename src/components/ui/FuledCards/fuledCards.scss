@@ -1,0 +1,53 @@
+@use '../../../styles/variables.scss' as *;
+
+.box {
+  margin: 8px 0 16px 0;
+  display: flex;
+  gap: 4px;
+}
+
+.header-card {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card {
+  position: relative;
+  width: 94%;
+  min-height: 22px;
+  padding: 4px 0 4px 4px;
+  display: flex;
+  border: 1px solid $BorderDefault;
+  border-radius: 4px;
+  gap: 4px;
+  flex-wrap: wrap;
+  &__svg {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+  }
+}
+
+.plus-card {
+  max-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid $BorderDefault;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.search-card {
+  max-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid $BorderDefault;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+@use '../../../styles/variables.scss' as *;
+
+.save-exit {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: #FFF;
+  border: 1px solid $BorderDefault;
+  border-radius: 4px;
+  color: $mainTextColor;
+  cursor: pointer;
+}

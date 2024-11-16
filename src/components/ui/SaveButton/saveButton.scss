@@ -1,0 +1,11 @@
+@use '../../../styles/variables.scss' as *;
+
+.save {
+  padding: 6px 12px;
+  font-size: 14px;
+  background-color: $bgButtonPrimary;
+  border: 1px solid $bgButtonPrimary;
+  border-radius: 4px;
+  color: #FFF;
+  cursor: pointer;
+}
