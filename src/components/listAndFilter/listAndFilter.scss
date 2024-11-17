@@ -33,3 +33,29 @@
   margin-left: 0;
   transition: all 0.2s ease-in-out;
 }
+
+@media (max-width: 991px) {
+  .list {
+    position: relative;
+    &-search {
+      position: absolute;
+    }
+  }
+  .active {
+    left: 7%;
+    z-index: 14;
+    background-color: #fff;
+    border-right: 1px solid $BorderDefault;
+  }
+}
+
+@media (max-width: 767px) {
+  .list {
+    &-search {
+      border-left: none;
+    }
+  }
+  .active {
+    left: 0;
+  }
+}

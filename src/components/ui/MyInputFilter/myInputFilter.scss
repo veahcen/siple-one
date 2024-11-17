@@ -12,6 +12,9 @@
       border: 1px solid $BorderDefault;
       border-radius: 4px;
     }
+    &-search:hover {
+      border: 1px solid $borderHover;
+    }
     &-search::placeholder {
       color: $colorTextMask;
     }
@@ -29,5 +32,9 @@
     max-height: 32px;
     border: 1px solid $BorderDefault;
     border-radius: 4px;
+    cursor: pointer;
+  }
+  &-pin:hover {
+    border: 1px solid $borderHover;
   }
 }

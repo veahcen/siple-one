@@ -88,6 +88,12 @@ const DialogWindow: FC<IDialogWindow> = ({open, onClick}) => {
       <div className="dialog__info" onClick={(e) => e.stopPropagation()}>
         <div className="dialog__info__header">
           <h3 className="dialog__info__header-text">Подзадача</h3>
+          
+          <button className="dialog__info-cross" onClick={onClick}>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.471 1.471A.667.667 0 1 0 8.53.53L5 4.057 1.471.53a.667.667 0 1 0-.942.942L4.057 5 .53 8.529a.667.667 0 0 0 .942.942L5 5.943 8.529 9.47a.667.667 0 0 0 .942-.942L5.943 5 9.47 1.471Z" fill="#2E3238"/>
+            </svg>
+          </button>
 
           <div className="dialog__info__buttons">
             <SaveButton text='Сохранить'/>
@@ -117,6 +123,11 @@ const DialogWindow: FC<IDialogWindow> = ({open, onClick}) => {
             <CalendarInput text='Когда создано' idName='date2w' value={arrText[4].name} onChange={(e) => handleChangeText(e, 4)} />
               <FuledCards text='Кем открыто' singlePersone='Андрей Пивоваров' />
             <FuledCards text='Кем создано' singlePersone='Андрей Пивоваров' />
+        </div>
+
+        <div className="dialog__info__buttons mobile">
+            <SaveButton text='Сохранить'/>
+            <SaveAndExitButton text='Отменить' onClick={onClick}/>
         </div>
       </div>
     </div>

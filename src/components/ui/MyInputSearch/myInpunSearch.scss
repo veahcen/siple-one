@@ -13,6 +13,9 @@
     border: 1px solid $BorderDefault;
     border-radius: 4px;
   }
+  &__search:hover {
+    border: 1px solid $borderHover;
+  }
   &__search::placeholder {
     color: $colorTextMask;
   }
@@ -28,3 +31,16 @@
   }
 }
 
+@media (max-width: 991px) {
+  .input {
+    &__search {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .input-header {
+    display: none;
+  }
+}

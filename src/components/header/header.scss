@@ -26,11 +26,39 @@
       height: 32px;
       border: 1px solid $BorderDefault;
       border-radius: 4px;
+      cursor: pointer;
       &-img {
         width: 20px;
         height: 20px;
         padding: 6px;
       }
     }
+    &__settings:hover {
+      border: 1px solid $borderHover;
+    }
+  }
+}
+
+.visible {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__panel {
+      width: 100%;
+      justify-content: end;
+      &__info {
+        &-text {
+          display: none;
+        }
+      }
+    }
+    &__logo {
+      display: none;
+    }
+  }
+  .visible {
+    display: inline-block;
   }
 }

@@ -9,3 +9,7 @@
   color: $mainTextColor;
   cursor: pointer;
 }
+
+.save-exit:hover {
+  border: 1px solid $borderHover;
+}

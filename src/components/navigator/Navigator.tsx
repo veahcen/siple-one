@@ -1,14 +1,16 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import './navigator.scss';
 import ListAndFilter from '../listAndFilter/ListAndFilter';
 
-const Navigator: FC = () => {
-  const [open, setOpen] = useState<boolean>(true);
+interface INavigator {
+  open: boolean
+  onClick: () => void;
 
-  const openOrClosePanel = () => {
-    setOpen(open => !open);
-  }
+}
+
+const Navigator: FC<INavigator> = ({open, onClick}) => {
+  
 
   return (
     <>
@@ -17,10 +19,10 @@ const Navigator: FC = () => {
           <svg 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg" 
-            className={open ? "nav__panel-open active" : "nav__panel-open"}
-            onClick={openOrClosePanel}
+            className={open ? "nav__panel-open active-btn" : "nav__panel-open"}
+            onClick={onClick}
             >
-            <path fillRule="evenodd" clipRule="evenodd" d="M3 20a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H3ZM2 3a1 1 0 0 1 1-1h3v16H3a1 1 0 0 1-1-1V3Zm6 15V2h9a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H8Z" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M3 20a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H3ZM2 3a1 1 0 0 1 1-1h3v16H3a1 1 0 0 1-1-1V3Zm6 15V2h9a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H8Z" />
             </svg>
 
             <svg fill="none" xmlns="http://www.w3.org/2000/svg" className="nav__panel-star">

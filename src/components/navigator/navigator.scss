@@ -26,6 +26,26 @@
   }
 }
 
-.active {
+.active-btn {
   fill: $iconAccent;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    border-right: 0;
+    &__panel {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .nav {
+    &__panel {
+      &-open {
+        margin-top: 6px;
+        padding: 8px;
+      }
+    }
+  }
 }

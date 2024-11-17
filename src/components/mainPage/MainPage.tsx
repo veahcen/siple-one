@@ -10,7 +10,7 @@ import SearcInput from '../ui/SearchInput/SearchInput';
 import DialogWindow from '../dialogWindow/DialogWindow';
 
 const MainPage: FC = () => {
-  const [text, setText] = useState<string>('На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller');
+  const [text, setText] = useState<string>('STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller');
   const [arrText, setArrText] = useState<{ id: number; name: string }[]>([
     { id: 0, name: "Проверить ACL id=172830402014193655" },
     { id: 1, name: "Новая" },
@@ -77,25 +77,41 @@ const MainPage: FC = () => {
               text='Тема'
               idName='theme'
               isDanger={true}
-              />
-            <InputText text='Описание' idName='descr'/>
-            <InputText text='Рабочие заметки' idName='work' isDanger={true} value={arrText[0].name} onChange={(e) => handleChangeText(e, 0)} />
-            <FuledCards text='Ответственный' singlePersone='Константин Константинопольский' />
+              />  
           </div>
           <div className="content__main-right">
             <InputText text='Статус' idName='status' value={arrText[1].name} onChange={(e) => handleChangeText(e, 1)} />
+          </div>
+          <div className="content__main-left">
+            <InputText text='Описание' idName='descr'/>
+          </div>
+          <div className="content__main-right">
             <SearcInput labelText='Продукт' idName='product' value={arrText[2].name} onChange={(e) => handleChangeText(e, 2)}/>
+          </div>
+          <div className="content__main-left">
+            <InputText text='Рабочие заметки' idName='work' isDanger={true} value={arrText[0].name} onChange={(e) => handleChangeText(e, 0)} />
+          </div>
+          <div className="content__main-right">
             <InputText text='Приоритет' idName='prioripy' value={arrText[3].name} onChange={(e) => handleChangeText(e, 3)} />
+          </div>
+          <div className="content__main-left">
+            <FuledCards text='Ответственный' singlePersone='Константин Константинопольский' />
+          </div>
+          <div className="content__main-right">
             <FuledCards text='Группа' singlePersone='Support Group' />
           </div>
           <InputText text='Комментарии' idName='comments'  />
           <FuledCards text='Согласующие' people={tags} />
           <div className="content__main-left">
             <CalendarInput text='Когда открыто' idName='date1' />
-            <FuledCards text='Кем открыто' singlePersone='Андрей Пивоваров' />
           </div>
           <div className="content__main-right">
             <CalendarInput text='Когда создано' idName='date2' value={arrText[4].name} onChange={(e) => handleChangeText(e, 4)} />
+          </div>
+          <div className="content__main-left">
+            <FuledCards text='Кем открыто' singlePersone='Андрей Пивоваров' />
+          </div>
+          <div className="content__main-right">
             <FuledCards text='Кем создано' singlePersone='Андрей Пивоваров' />
           </div>
         </div>

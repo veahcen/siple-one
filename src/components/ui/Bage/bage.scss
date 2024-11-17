@@ -9,6 +9,7 @@
   &__text {
     padding: 2px 8px;
     font-size: 14px;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -23,5 +24,11 @@
   }
   &__button-no {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .bage {
+    max-width: 158px;
   }
 }

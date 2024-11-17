@@ -28,6 +28,9 @@
         background: #FFF;
         cursor: pointer;
       }
+      &-btn:hover {
+        border: 1px solid $borderHover;
+      }
     }
     &__save {
       display: flex;
@@ -36,24 +39,106 @@
   }
   &__main {
     padding: 0 16px;
-  &__header {
-    margin: 0 0 24px 0;
-    width: 1108px;
-    font-family: 'Montserrat';
-    font-size: 24px;
-    font-weight: 600;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    &__header {
+      margin: 0 0 24px 0;
+      width: 1108px;
+      font-family: 'Montserrat';
+      font-size: 24px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &-left {
+      display: inline-block;
+      width: 49%;
+      margin-right: 16px;
+    }
+    &-right {
+      display: inline-block;
+      width: 49%;
+    }
   }
-  &-left {
-    display: inline-block;
-    width: 49%;
-    margin-right: 16px;
+}
+
+
+@media (max-width: 1480px) {
+  .content {
+    &__main {
+      &__header {
+        max-width: 800px;
+      }
+    }
   }
-  &-right {
-    display: inline-block;
-    width: 49%;
+}
+
+@media (max-width: 1162px) {
+  .content {
+    &__main {
+      &__header {
+        max-width: 610px;
+      }
+    }
   }
+}
+
+@media (max-width: 991px) {
+  .content {
+    &__main {
+      &__header {
+        max-width: 540px;
+      }
+      &-left {
+        margin-right: 0;
+        width: 100%;
+      }
+      &-right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    &__main {
+      &__header {
+        font-size: 20px;
+      }
+    }
+    &__header{
+      &__save {
+        display: none;
+      }
+      &__task {
+        width: 100%;
+        justify-content: space-between;
+        &-text {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #5C6470;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .content {
+    &__main {
+      &__header {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    &__main {
+      &__header {
+        max-width: 200px;
+      }
+    }
   }
 }

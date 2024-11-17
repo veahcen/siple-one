@@ -29,6 +29,10 @@
   }
 }
 
+.card:hover {
+  border: 1px solid $borderHover;
+}
+
 .plus-card {
   max-height: 32px;
   display: flex;
@@ -40,6 +44,9 @@
   background-color: #fff;
   cursor: pointer;
 }
+.plus-card:hover {
+  border: 1px solid $borderHover;
+}
 .search-card {
   max-height: 32px;
   display: flex;
@@ -50,4 +57,7 @@
   border-radius: 4px;
   background-color: #fff;
   cursor: pointer;
+}
+.search-card:hover {
+  border: 1px solid $borderHover;
 }

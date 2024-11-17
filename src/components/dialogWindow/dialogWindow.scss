@@ -24,8 +24,10 @@
     overflow-y: auto; 
     max-width: 800px;
     width: 100%;
-    
     background-color: #fff;
+    &-cross {
+      display: none;
+    }
     &__header {
       padding: 24px;
       display: flex;
@@ -51,5 +53,55 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .dialog {
+    &__info {
+      width: 95%;
+      height: 90%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dialog {
+    &__info {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      &__buttons {
+        display: none;
+      }
+      &-cross {
+        padding: 8px;
+        display: flex;
+        border: 1px solid $BorderDefault;
+        border-radius: 4px;
+        background: none;
+        cursor: pointer;
+      }
+      &-cross:hover {
+        border: 1px solid $borderHover;
+      }
+      &__header {
+        &-text {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #5C6470;
+        }
+      }
+    }
+  }
+  .mobile {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }

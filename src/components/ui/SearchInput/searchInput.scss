@@ -19,6 +19,9 @@
     border: 1px solid $BorderDefault;
     border-radius: 4px;
   }
+  &__text:hover {
+    border: 1px solid $borderHover;
+  }
 }
 
 .box-search {

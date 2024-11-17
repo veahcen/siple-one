@@ -16,6 +16,9 @@
     border: 1px solid $BorderDefault;
     border-radius: 4px;
   }
+  &-input:hover {
+    border: 1px solid $borderHover;
+  }
   &-button {
     display: flex;
     align-items: center;
@@ -26,5 +29,8 @@
     border-radius: 4px;
     background-color: #fff;
     cursor: pointer;
+  }
+  &-button:hover {
+    border: 1px solid $borderHover;
   }
 }
